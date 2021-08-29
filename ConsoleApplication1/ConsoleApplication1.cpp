@@ -2,10 +2,33 @@
 //
 
 #include <iostream>
-
+#include <conio.h>
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+	setlocale(0, "ru");
+    int a = 0;
+	while (true)
+	{
+		a = _getch();
+		if (a==224)
+		{
+			a = _getch();
+			switch (a)
+			{
+			case 72: {cout << " вверх " << endl; } break;
+			case 80: {cout << " вниз " << endl; } break;
+			case 75: {cout << " влево " << endl; } break;
+			case 77: {cout << " вправо " << endl; } break;
+			default:
+				break;
+			}
+		}
+		else if (a==32)
+		{
+			cout << " пробел " << endl;
+		}
+	}
   
 }
 
